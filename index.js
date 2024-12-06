@@ -1,5 +1,6 @@
 const { Client, Collection, GatewayIntentBits, IntentsBitField, ActionRowBuilder, StringSelectMenuBuilder, Partials } = require('discord.js');
 require('dotenv').config();
+require("./keep_alive.js");
 
 const client = new Client({
     intents: [
