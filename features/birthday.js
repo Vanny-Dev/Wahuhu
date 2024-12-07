@@ -191,10 +191,10 @@ client.on('messageCreate', async (message) => {
             .setTitle('Birthday Bot Commands')
             .setDescription('Here are the available commands for the Birthday Bot:')
             .addFields(
-                { name: '!setbirthday <YYYY-MM-DD>', value: 'Set your birthday.' },
-                { name: '!birthdays', value: 'View today\'s birthdays.' },
-                { name: '!allbirthdays', value: 'View all users\' birthdays.' },
-                { name: '!help', value: 'Displays this help message.' }
+                { name: 'w!setbirthday <YYYY-MM-DD>', value: 'Set your birthday.' },
+                { name: 'w!birthdays', value: 'View today\'s birthdays.' },
+                { name: 'w!allbirthdays', value: 'View all users\' birthdays.' },
+                { name: 'w!help', value: 'Displays this help message.' }
             )
             .setFooter({ text: 'Use the commands to interact with the Birthday Bot!' })
             .setTimestamp();
