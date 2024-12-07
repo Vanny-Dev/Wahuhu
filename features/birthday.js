@@ -131,7 +131,7 @@ client.on('messageCreate', async (message) => {
         }
     }
 
-    if (message.content.startsWith('!birthdays')) {
+    if (message.content.startsWith('w!birthdays')) {
         try {
             const birthdays = await getTodaysBirthdays();
             if (birthdays.length === 0) {
@@ -157,7 +157,7 @@ client.on('messageCreate', async (message) => {
         }
     }
 
-    if (message.content.startsWith('!allbirthdays')) {
+    if (message.content.startsWith('w!allbirthdays')) {
         try {
             const allBirthdays = await getAllBirthdays();
             if (allBirthdays.length === 0) {
@@ -185,7 +185,7 @@ client.on('messageCreate', async (message) => {
         }
     }
 
-    if (message.content.startsWith('!help')) {
+    if (message.content.startsWith('w!help')) {
         const embed = new EmbedBuilder()
             .setColor('#7289DA')
             .setTitle('Birthday Bot Commands')
