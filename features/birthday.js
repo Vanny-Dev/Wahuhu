@@ -184,6 +184,23 @@ client.on('messageCreate', async (message) => {
             message.reply('Failed to retrieve the list of all birthdays. Please try again.');
         }
     }
+
+    if (message.content.startsWith('!help')) {
+        const embed = new EmbedBuilder()
+            .setColor('#7289DA')
+            .setTitle('Birthday Bot Commands')
+            .setDescription('Here are the available commands for the Birthday Bot:')
+            .addFields(
+                { name: '!setbirthday <YYYY-MM-DD>', value: 'Set your birthday.' },
+                { name: '!birthdays', value: 'View today\'s birthdays.' },
+                { name: '!allbirthdays', value: 'View all users\' birthdays.' },
+                { name: '!help', value: 'Displays this help message.' }
+            )
+            .setFooter({ text: 'Use the commands to interact with the Birthday Bot!' })
+            .setTimestamp();
+
+        message.reply({ embeds: [embed] });
+    }
 });
 
 client.login(process.env.TOKEN);
