@@ -101,7 +101,7 @@ client.once('ready', () => {
 client.on('messageCreate', async (message) => {
     if (message.author.bot) return;
 
-    if (message.content.startsWith('!setbirthday')) {
+    if (message.content.startsWith('w!setbirthday')) {
         const userId = message.author.id;
         const username = message.author.username;
         const args = message.content.split(' ')[1];
