@@ -89,7 +89,7 @@ client.once('ready', () => {
         const birthdays = await getTodaysBirthdays();
         if (birthdays.length > 0) {
             const names = birthdays.map((b) => b.username).join(', ');
-            const channel = client.channels.cache.find((ch) => ch.name === 'chikahuhu'); // Replace with your desired channel name
+            const channel = client.channels.cache.find((ch) => ch.id === "1295385760400146574"); // Replace with your desired channel name
             if (channel) {
                 channel.send(`🎉 Happy Birthday to: ${names}! 🎂`);
             }
