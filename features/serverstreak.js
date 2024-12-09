@@ -10,7 +10,11 @@ const client = new Client({
 });
 
 const PREFIX = 'w!';
-const db = new sqlite3.Database('./database/streaks.db');
+// Connect to SQLite database
+const db = new sqlite3.Database('./database/streaks.db', (err) => {
+    if (err) console.error(err.message);
+    console.log('Connected to the streaks database.');
+});
 
 // Create streaks table if it doesn't exist
 db.run(`
