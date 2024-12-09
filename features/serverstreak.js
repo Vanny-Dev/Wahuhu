@@ -10,7 +10,7 @@ const client = new Client({
 });
 
 const PREFIX = 'w!';
-const db = new sqlite3.Database('./streaks.db');
+const db = new sqlite3.Database('./database/streaks.db');
 
 // Create streaks table if it doesn't exist
 db.run(`
