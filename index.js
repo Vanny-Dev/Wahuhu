@@ -3,6 +3,7 @@ require('dotenv').config();
 require("./keep_alive.js");
 require("./features/birthday.js")
 require("./features/vcnotif.js")
+require("./features/serverstreak.js")
 
 const client = new Client({
     intents: [
