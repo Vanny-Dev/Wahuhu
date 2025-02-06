@@ -1,9 +1,10 @@
 const { Client, GatewayIntentBits, IntentsBitField, Partials } = require('discord.js');
 require('dotenv').config();
 require("./keep_alive.js");
-require("./features/birthday.js")
-require("./features/vcnotif.js")
-require("./features/serverstreak.js")
+// require("./old_features/birthday.js")
+// require("./features/vcnotif.js")
+// require("./old_features/serverstreak.js")
+require("./features/serverBackup.js")
 
 const client = new Client({
     intents: [
